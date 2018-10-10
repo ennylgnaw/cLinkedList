@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "linkedlist.h"
+#include "linkedList.h"
 
 void print_list(struct node *head) {
   printf("Linked List:\n");
@@ -20,7 +20,7 @@ struct node * insert_front(struct node *head, int data) {
 
 struct node * free_list(struct node *anode) {
   while (anode) {
-    struct node *nextNode anode->next;
+    struct node *nextNode = anode->next;
     free(anode);
     anode = nextNode;
   }

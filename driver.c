@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "linked_list.h"
+#include "linkedList.h"
 
 int main() {
   struct node *one = malloc(sizeof(struct node));
@@ -12,14 +12,14 @@ int main() {
   two->i = 2;
   two->next = three;
   three->i = 3;
-  third->next = NULL;
+  three->next = NULL;
 
   printf("Testing print_list function:\n");
   print_list(one);
 
   struct node *new = insert_front(one, 0);
   printf("Testing insert_front function:\n");
-  print_list(one);
+  print_list(new);
 
   printf("Testing free_list function:\n");
   print_list(free_list(new));
